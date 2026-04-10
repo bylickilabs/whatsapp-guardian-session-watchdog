@@ -1,5 +1,3 @@
-COMING SOON
-
 # WA Guardian - Session Watchdog
 
 A Manifest V3 browser extension for defensive **WhatsApp Web** session monitoring, event logging, QR login detection, heartbeat supervision, bilingual UI support, and transparent visibility into selected browser session changes.
