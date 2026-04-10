@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WA Guardian - Options</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options-body">
+  <div class="options-shell">
+    <header class="app-header">
+      <div>
+        <div class="eyebrow">WA Guardian</div>
+        <h1 id="optionsTitle">Optionen</h1>
+      </div>
+      <div class="header-actions">
+        <button id="languageToggleBtn" class="ghost-btn small-btn" type="button">DE / EN</button>
+        <button id="infoBtn" class="ghost-btn small-btn" type="button">Info</button>
+      </div>
+    </header>
+
+    <section class="options-grid">
+      <label class="option-card">
+        <span id="labelNotifications">Benachrichtigungen aktivieren</span>
+        <input id="notificationsEnabled" type="checkbox">
+      </label>
+
+      <label class="option-card">
+        <span id="labelBadge">Badge aktivieren</span>
+        <input id="badgeEnabled" type="checkbox">
+      </label>
+
+      <label class="option-card">
+        <span id="labelFocus">Fokusänderungen überwachen</span>
+        <input id="trackFocus" type="checkbox">
+      </label>
+
+      <label class="option-card">
+        <span id="labelVisibility">Sichtbarkeitsänderungen überwachen</span>
+        <input id="trackVisibility" type="checkbox">
+      </label>
+
+      <label class="option-card">
+        <span id="labelTitleChanges">Titeländerungen protokollieren</span>
+        <input id="logTitleChanges" type="checkbox">
+      </label>
+
+      <label class="option-card">
+        <span id="labelUnreadChanges">Ungelesene Änderungen überwachen</span>
+        <input id="trackUnreadChanges" type="checkbox">
+      </label>
+
+      <label class="option-card wide-card">
+        <span id="labelMaxEvents">Maximale Anzahl gespeicherter Events</span>
+        <input id="maxEvents" type="number" min="50" step="10">
+      </label>
+
+      <label class="option-card wide-card">
+        <span id="labelHeartbeat">Heartbeat Timeout in Millisekunden</span>
+        <input id="heartbeatTimeoutMs" type="number" min="5000" step="1000">
+      </label>
+    </section>
+
+    <section class="toolbar">
+      <button id="saveSettingsBtn" type="button">Speichern</button>
+      <button id="reloadSettingsBtn" type="button">Neu laden</button>
+    </section>
+
+    <div id="optionsStatus" class="status-message">Bereit.</div>
+
+    <footer id="footerText" class="app-footer">© 2026 Thorsten Bylicki / BYLICKILABS</footer>
+  </div>
+
+  <div id="infoModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card wide-modal">
+      <div class="modal-head">
+        <h2 id="infoTitle">Informationen</h2>
+        <button id="closeInfoBtn" class="ghost-btn small-btn" type="button">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="infoIntro"></p>
+        <div class="info-list">
+          <div class="info-item">
+            <strong id="infoLanguageLabel"></strong>
+            <p id="infoLanguageText"></p>
+          </div>
+          <div class="info-item">
+            <strong id="infoSettingsLabel"></strong>
+            <p id="infoSettingsText"></p>
+          </div>
+          <div class="info-item">
+            <strong id="infoStorageLabel"></strong>
+            <p id="infoStorageText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

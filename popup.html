@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WA Guardian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <div class="eyebrow">WA Guardian</div>
+        <h1 id="appTitle">Session Watchdog</h1>
+      </div>
+      <div class="header-actions">
+        <button id="languageToggleBtn" class="ghost-btn small-btn" type="button">DE / EN</button>
+        <button id="infoBtn" class="ghost-btn small-btn" type="button">Info</button>
+        <button id="openOptionsBtn" class="ghost-btn small-btn" type="button">Optionen</button>
+      </div>
+    </header>
+
+    <section class="status-panel">
+      <div class="metric-grid">
+        <div class="metric-card">
+          <span id="labelStatus" class="metric-label">Status</span>
+          <span id="monitoringStatus" class="metric-value">...</span>
+        </div>
+        <div class="metric-card">
+          <span id="labelMode" class="metric-label">Modus</span>
+          <span id="modeValue" class="metric-value">unknown</span>
+        </div>
+        <div class="metric-card">
+          <span id="labelUnread" class="metric-label">Ungelesen</span>
+          <span id="unreadValue" class="metric-value">0</span>
+        </div>
+        <div class="metric-card">
+          <span id="labelEvents" class="metric-label">Events</span>
+          <span id="eventCountValue" class="metric-value">0</span>
+        </div>
+      </div>
+      <div id="statusMessage" class="status-message">Bereit.</div>
+    </section>
+
+    <section class="toolbar">
+      <button id="refreshBtn" type="button">Aktualisieren</button>
+      <button id="exportJsonBtn" type="button">JSON</button>
+      <button id="exportCsvBtn" type="button">CSV</button>
+      <button id="clearEventsBtn" type="button" class="danger-btn">Leeren</button>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2 id="recentEventsTitle">Letzte Ereignisse</h2>
+      </div>
+      <div id="eventList" class="event-list">
+        <div class="empty-state">Keine Ereignisse vorhanden.</div>
+      </div>
+    </section>
+
+    <footer id="footerText" class="app-footer">© 2026 Thorsten Bylicki / BYLICKILABS</footer>
+  </div>
+
+  <div id="infoModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="infoTitle">Informationen</h2>
+        <button id="closeInfoBtn" class="ghost-btn small-btn" type="button">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="infoIntro"></p>
+        <div class="info-list">
+          <div class="info-item">
+            <strong id="infoPurposeLabel"></strong>
+            <p id="infoPurposeText"></p>
+          </div>
+          <div class="info-item">
+            <strong id="infoScopeLabel"></strong>
+            <p id="infoScopeText"></p>
+          </div>
+          <div class="info-item">
+            <strong id="infoUseLabel"></strong>
+            <p id="infoUseText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
